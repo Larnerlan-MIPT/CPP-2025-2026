@@ -1,0 +1,12 @@
+int* p = &a;
+float* p = &a;
+int* p = &array[0];
+char* p = &str[7];
+int** q = &p;
+*p = *p * 2;
+*p = *p - 32;
+*(p + 3) = *(p + 3) + 1;
+*(p - 3) = *(p - 3) + 1;
+for (; *p; p++)
+        if (*p >= 'a' && *p <= 'z') *p -= 32;
+**q = **q * 2;
