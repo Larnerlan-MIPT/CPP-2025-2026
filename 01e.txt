@@ -1,0 +1,8 @@
+OS: Linux
+Compiler: g++
+Shell: bash
+Commands:
+g++ -fPIC -c algebra.cpp geometry.cpp statistics.cpp
+g++ -shared -o libmiptlib.so algebra.o geometry.o statistics.o
+g++ 01e_test.cpp -o test_dl -ldl
+LD_LIBRARY_PATH=. ./test_dl
